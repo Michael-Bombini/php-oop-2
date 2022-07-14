@@ -2,10 +2,19 @@
 
 class Product
 {
-    protected  $name;
+    protected $name;
     protected $price;
     protected $description;
     protected $category;
+    
+
+    function __construct($_name , $_price , $_description )
+    {
+        $this->setName($_name);
+        $this->setPrice($_price);
+        $this->setDescription($_description);
+    }
+
 
     /**
      * Get the value of name
@@ -46,6 +55,27 @@ class Product
 
         return $this;
     }
+
+    /**
+     * Get the value of description
+     */ 
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set the value of description
+     *
+     * @return  self
+     */ 
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
 }
 
 ?>
