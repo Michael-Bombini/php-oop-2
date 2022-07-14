@@ -17,7 +17,7 @@ class CreditCard{
     /**
      * Get the value of cardNumber
      */ 
-    protected function getCardNumber()
+    public function getCardNumber()
     {
         return $this->cardNumber;
     }
@@ -27,7 +27,7 @@ class CreditCard{
      *
      * @return  self
      */ 
-    protected function setCardNumber($cardNumber)
+    public function setCardNumber($cardNumber)
     {
         $this->cardNumber = $cardNumber;
 
@@ -37,7 +37,7 @@ class CreditCard{
     /**
      * Get the value of cvv
      */ 
-    protected function getCvv()
+    public function getCvv()
     {
         return $this->cvv;
     }
@@ -47,7 +47,7 @@ class CreditCard{
      *
      * @return  self
      */ 
-    protected function setCvv($cvv)
+    public function setCvv($cvv)
     {
         $this->cvv = $cvv;
 
@@ -57,7 +57,7 @@ class CreditCard{
     /**
      * Get the value of expiryDate
      */ 
-    protected function getExpiryDate()
+    public function getExpiryDate()
     {
         return $this->expiryDate;
     }
@@ -67,7 +67,7 @@ class CreditCard{
      *
      * @return  self
      */ 
-    protected function setExpiryDate($expiryDate)
+    public function setExpiryDate($expiryDate)
     {
         $this->expiryDate = $expiryDate;
 
@@ -75,7 +75,7 @@ class CreditCard{
     }
 
 
-    protected function isExpired(){
+    public function isExpired(){
       $expire = $this->getExpiryDate;
       $expire = strtotime($expire);
       $todayMonthYear = date("m") + date("y");

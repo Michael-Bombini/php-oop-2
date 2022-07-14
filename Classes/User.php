@@ -12,14 +12,14 @@ private $isRegistered;
 private CreditCard $creditCard;
 private $cart = [];
 
-function __construct($_name , $_surname , $_email , $_password , $_isRegistered )
+function __construct($_name , $_surname , $_email , $_password , $_isRegistered , $_cardNumber , $_cvc , $_expire )
 {
     $this->setName($_name);
     $this->setSurname($_surname);
     $this->setEmail($_email);
     $this->setPassword($_password);
     $this->setIsRegistered($_isRegistered);
-    $this->creditCard = new CreditCard("1234123456785678" , "123" , "11 27");
+    $this->creditCard = new CreditCard($_cardNumber , $_cvc , $_expire);
 }
 
 
@@ -138,7 +138,7 @@ return $this->cart;
  */ 
 public function setCart($cart)
 {
-$this->cart = $cart;
+$this->cart.array_push($cart);
 
 return $this;
 }
