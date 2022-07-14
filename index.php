@@ -29,7 +29,7 @@ $pallaRimbalzante = new GameProduct
 
 $userUno = new User("Mario" , "Rossi" , "mariorossi@gmail.com"  , "MarioRossi111" , true);
 $userDue = new User("Luigi" , "Verdi" , "luigiverdi@gmail.com"  , "LuigiVerdi222" , false);
-var_dump($userUno)
+var_dump($userUno , $userDue);
 
 ?>
 
