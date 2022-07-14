@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/CreditCard.php";
 
-class User{
+class User extends CreditCard{
 
 private $name;
 private $surname;
@@ -14,6 +14,8 @@ private $cart = [];
 
 function __construct($_name , $_surname , $_email , $_password , $_isRegistered , $_cardNumber , $_cvc , $_expire )
 {
+    parent::__construct($_cardNumber , $_cvc , $_expire);
+
     $this->setName($_name);
     $this->setSurname($_surname);
     $this->setEmail($_email);
@@ -138,8 +140,7 @@ return $this->cart;
  */ 
 public function setCart($cart)
 {
-$this->cart.array_push($cart);
+array_push($this->cart,$cart);
 
-return $this;
 }
 }

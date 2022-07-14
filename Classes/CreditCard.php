@@ -75,16 +75,17 @@ class CreditCard{
     }
 
 
-    public function isExpired(){
-      $expire = $this->getExpiryDate;
-      $expire = strtotime($expire);
-      $todayMonthYear = date("m") + date("y");
-      if($expire> $todayMonthYear){
-        return ;
+    public function isExpired($expiryDate){
+      $today = date("Y");
+      if($expiryDate < $today){
+        return false;
+      }
+        else{
+        return true;
+        }
       }
       
-    }
+}
 
 
     
-}

@@ -30,14 +30,51 @@ $pallaRimbalzante = new GameProduct
 ("Palla" , "7.99€" , "Palla per cani rimbalzante resistente in gomma naturale" , "Verde" , "Gomma Naturale");
 
 
-$userUno = new User("Mario" , "Rossi" , "mariorossi@gmail.com"  , "MarioRossi111" , true , "1237637384272632" , "100" , "05 2026");
+$userUno = new User("Mario" , "Rossi" , "mariorossi@gmail.com"  , "MarioRossi111" , true , "1237637384272632" , "100" , "2026");
 
-$userDue = new User("Luigi" , "Verdi" , "luigiverdi@gmail.com"  , "LuigiVerdi222" , false , "6292173483261275" , "166" , "01 2021");
-var_dump($userUno , $userDue);
+$userDue = new User("Luigi" , "Verdi" , "luigiverdi@gmail.com"  , "LuigiVerdi222" , false , "6292173483261275" , "166" , "2020");
+
 
 $userUno->setCart($crocchetteCani);
 $userUno->setCart($crocchetteGatti);
+$userUno->setCart($pallaRimbalzante);
+$userUno->setCart($pallaRimbalzante);
+$userDue->setCart($crocchetteGatti);
+$userDue->setCart($cucciaCani);
+$userDue->setCart($pallaRimbalzante);
+$userDue->setCart($pallaRimbalzante);
+
+$userUnoExpire = $userUno->getExpiryDate();
+$userDueExpire = $userDue->getExpiryDate();
+
+echo "<h1>";
+if(($userUno->isExpired($userUnoExpire))){
+    echo "La carta di userUno è scaduta";
+}
+else 
+    echo "La carta di userDue non è scaduta";
+
+echo "<br>";
+
+    if(($userDue->isExpired($userDueExpire))){
+        echo "La carta di userDue è scaduta";
+        
+    }
+    else 
+        echo "La carta di userDue non è scaduta";
+    
+
+echo "</h1>";
+
+echo "<h2>Utente Uno</h2>";
 var_dump($userUno);
+echo "<h2>Utente Due</h2>";
+var_dump($userDue);
+
+
+
+    
+    
 
 ?>
 
