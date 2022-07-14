@@ -4,6 +4,7 @@ require_once __DIR__ .  "/Classes/Product.php";
 require_once __DIR__ .   "./Classes/FoodProduct.php";
 require_once __DIR__ .   "./Classes/PetBedProduct.php";
 require_once __DIR__ .   "./Classes/GameProduct.php";
+require_once __DIR__ .   "./Classes/User.php";
 
 /*
 CREAZIONE INSTANZE CLASSI
@@ -26,7 +27,9 @@ $pallaRimbalzante = new GameProduct
 ("Palla" , "7.99€" , "Palla per cani rimbalzante resistente in gomma naturale" , "Verde" , "Gomma Naturale");
 
 
-
+$userUno = new User("Mario" , "Rossi" , "mariorossi@gmail.com"  , "MarioRossi111" , true);
+$userDue = new User("Luigi" , "Verdi" , "luigiverdi@gmail.com"  , "LuigiVerdi222" , false);
+var_dump($userUno)
 
 ?>
 

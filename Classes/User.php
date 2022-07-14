@@ -121,4 +121,24 @@ $this->isRegistered = $isRegistered;
 
 return $this;
 }
+
+/**
+ * Get the value of cart
+ */ 
+public function getCart()
+{
+return $this->cart;
+}
+
+/**
+ * Set the value of cart
+ *
+ * @return  self
+ */ 
+public function setCart($cart)
+{
+$this->cart = $cart;
+
+return $this;
+}
 }
