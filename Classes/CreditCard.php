@@ -76,6 +76,9 @@ class CreditCard{
 
 
     public function isExpired($expiryDate){
+    if(!is_string($expiryDate))
+        throw new Exception("Attenzione la data di scadenza non è una stringa");
+        else{
       $today = date("Y");
       if($expiryDate < $today){
         return false;
@@ -84,7 +87,7 @@ class CreditCard{
         return true;
         }
       }
-      
+    }
 }
 
 
