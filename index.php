@@ -28,6 +28,8 @@ $cucciaCani = new PetBedProduct
 
 $pallaRimbalzante = new GameProduct
 ("Palla" , "7.99€" , "Palla per cani rimbalzante resistente in gomma naturale" , "Verde" , "Gomma Naturale");
+$pallaRimbalzante->setStartingMonth("january");
+$pallaRimbalzante->setEndingMonth("may");
 
 
 $userUno = new User("Mario" , "Rossi" , "mariorossi@gmail.com"  , "MarioRossi111" , true , "1237637384272632" , "100" , "2020");

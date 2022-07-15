@@ -12,7 +12,6 @@ class GameProduct extends Product{
     use AvaibilityProduct;
     
 
-
 function __construct($_name , $_price , $_description , $_color , $_material)
 {
     parent::__construct($_name , $_price , $_description);
